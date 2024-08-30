@@ -2,11 +2,8 @@ import streamlit as st
 import google.generativeai as genai
 
 import os
-from dotenv import load_dotenv
-
 # Cargar las variables del archivo .env
-load_dotenv()
-api_key = os.getenv('GEMINI_API_KEY')
+api_key = "AIzaSyBf4aeXhaa6A8qqY1dRV_9C-Xp5JPrH0pY"
 genai.configure(api_key=api_key)
 
 #PROMT_CONSTANT = " Incluye la referencia de la informacion que proporcionas y el titulo del documento o los documentos de los cuales obtuviste la informacion."
