@@ -1,4 +1,4 @@
-FROM python:3.12
+FROM python:3.8
 
 # Set environment variables
 ENV GEMINI_API_KEY = "AIzaSyBf4aeXhaa6A8qqY1dRV_9C-Xp5JPrH0pY"
