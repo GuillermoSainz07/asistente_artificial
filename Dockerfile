@@ -10,6 +10,7 @@ WORKDIR /app
 COPY . /app/
 
 # Install any needed packages specified in requirements.txt
+RUN pip install -U google-generativeai
 RUN pip install -r requirements.txt
 
 # Run the Streamlit app
