@@ -6,8 +6,9 @@ import os
 PROMT_CONSTANT = " Incluye la referencia en formato APA"
 
 with st.sidebar:
-    st.image('logo.png',caption="Proyecto de servicio social FACES. \n Asistente basado el modelo de lenguaje Gemini, con contexto agregado sobre leyes y codigos utililes para el area \
-             de auditoria UAS.",width=200)
+    st.image('logo.png',caption="Proyecto de servicio social FACES" ,width=200)
+    st.write("Asistente basado el modelo de lenguaje Gemini, con contexto agregado sobre leyes y codigos utililes para el area \
+             de auditoria UAS.")
     "[Codigo fuente](https://github.com/streamlit/llm-examples/blob/main/Chatbot.py)"
 
 
