@@ -20,7 +20,7 @@ for msg in st.session_state.messages:
 
 if prompt := st.chat_input():
  
-    gemini_api_key = st.st.secrets["GEMINI_API_KEY"]
+    gemini_api_key = st.secrets["GEMINI_API_KEY"]
 
     genai.configure(api_key=gemini_api_key)
 
