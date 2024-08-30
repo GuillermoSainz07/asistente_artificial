@@ -2,14 +2,15 @@ import streamlit as st
 import google.generativeai as genai
 
 import os
-# Cargar las variables del archivo .env
-api_key = "AIzaSyBf4aeXhaa6A8qqY1dRV_9C-Xp5JPrH0pY"
-genai.configure(api_key=api_key)
 
-#PROMT_CONSTANT = " Incluye la referencia de la informacion que proporcionas y el titulo del documento o los documentos de los cuales obtuviste la informacion."
 PROMT_CONSTANT = " Incluye la referencia en formato APA"
 
-st.title("💬🤖 Asistente Chatbot")
+with st.sidebar:
+    st.image('logo.png',caption="Proyecto servicio social FACES",width=200)
+    "[Codigo fuente](https://github.com/streamlit/llm-examples/blob/main/Chatbot.py)"
+
+
+st.title("💬🤖 AudiBot")
 
 if "messages" not in st.session_state:
     st.session_state["messages"] = [{"role": "assistant", "content": "Como puedo ayudarte?"}]
@@ -18,6 +19,10 @@ for msg in st.session_state.messages:
     st.chat_message(msg["role"]).write(msg["content"])
 
 if prompt := st.chat_input():
+ 
+    gemini_api_key = st.st.secrets["GEMINI_API_KEY"]
+
+    genai.configure(api_key=gemini_api_key)
 
     sample_file = genai.upload_file(path="codigo-fiscal-del-estado-de-sinaloa.pdf",
                                 display_name="Gemini 1.5 PDF")
