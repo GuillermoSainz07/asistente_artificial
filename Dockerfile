@@ -1,7 +1,7 @@
 FROM python:3.8
 
 # Set environment variables
-ENV GEMINI_API_KEY = "AIzaSyBf4aeXhaa6A8qqY1dRV_9C-Xp5JPrH0pY"
+ENV GEMINI_API_KEY = NONE
 
 # Set the working directory in the container
 WORKDIR /app
